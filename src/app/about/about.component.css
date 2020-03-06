@@ -1,0 +1,18 @@
+.feature-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.feature {
+  max-width: 280px;
+  margin: 15px 15px 0px;
+}
+
+.feature-title {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 8px 0;
+  clear: both;
+}

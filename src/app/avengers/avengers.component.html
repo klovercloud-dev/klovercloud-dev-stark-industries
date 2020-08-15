@@ -2,11 +2,39 @@
 
 
 <div class="feature-row">
-  <div class="feature" >
-<span *ngFor="let avenger of avengers">
-  <span style="background-color:rgba(69, 80, 91, 0.85) !important;color: #fafafa">{{avenger.name}}</span>
-      <img class="img-fluid img-thumbnail" src="data:image/PNG;base64,{{avenger.image}}" src="data:image/JPG;base64,{{avenger.image}}" width="304" height="236" alt=""/>
-</span>
-
+  <span *ngFor="let avenger of avengers">-
+  <div class="feature">
+    <div class="feature-title">{{avenger.name}}</div>
+     <p class="text-body" style="line-height: 1.6;"> War attended
+    <span *ngFor="let mission of avenger.missions">
+           <span style="font-style: italic">{{mission}} </span>
+         </span></p>
+    <img class="img-fluid" src="data:image/PNG;base64,{{avenger.image}}" src="data:image/JPG;base64,{{avenger.image}}" width="304" alt=""/>
   </div>
+  </span>
 </div>
+
+
+<!-- Grid row -->
+<!--<div class="row">-->
+<!--</div>-->
+<!--&lt;!&ndash; Grid row &ndash;&gt;-->
+
+<!--&lt;!&ndash; Grid row &ndash;&gt;-->
+<!--<div class="gallery" id="gallery" >-->
+
+<!--  &lt;!&ndash; Grid column &ndash;&gt;-->
+<!--  <span *ngFor="let avenger of avengers">-->
+<!--  <div class="mb-3 pics animation all 2" >-->
+<!--      <span style="background-color:rgba(69, 80, 91, 0.85) !important;color: #fafafa">{{avenger.name}}</span>  <span *ngFor="let mission of avenger.missions">-->
+<!--     <span>{{mission.name}}</span>-->
+<!--   </span>-->
+<!--    <img class="img-fluid" src="data:image/PNG;base64,{{avenger.image}}" src="data:image/JPG;base64,{{avenger.image}}" width="304" alt=""/>-->
+
+<!--  </div>-->
+<!--    </span>-->
+
+
+
+<!--  </div>-->
+<!-- Grid row -->

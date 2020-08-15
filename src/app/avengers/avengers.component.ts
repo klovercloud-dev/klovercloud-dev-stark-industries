@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AvengersService} from "./service/avengers.service";
+import {Avengers} from "./avengers";
 
 @Component({
   selector: 'app-avengers',
@@ -8,15 +9,14 @@ import {AvengersService} from "./service/avengers.service";
 })
 export class AvengersComponent implements OnInit {
 
-public avengers
+   avengers: Array<Avengers>
+
   constructor(private avengersService:AvengersService) { }
 
   ngOnInit(): void {
-  this.avengersService.getAvengers().subscribe((data) => {
-    this.avengers = data
-    console.log(data.valueOf())
+  this.avengersService.get().subscribe((data) => {
+    this.avengers = Avengers.parse(data)
   })
-    console.log(this.avengers);
 
   }
 

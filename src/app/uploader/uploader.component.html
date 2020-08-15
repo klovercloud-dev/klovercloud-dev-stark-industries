@@ -1,0 +1,56 @@
+
+<!--<form>-->
+<!--  <div class="form-row">-->
+<!--    <div class="col">-->
+<!--      <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">-->
+<!--    </div>-->
+<!--    <div class="col">-->
+<!--      <input type="password" class="form-control" placeholder="Enter password" name="pswd">-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</form>-->
+<!--<div class="card-container">-->
+<p>{{msg}} </p>
+<form [formGroup]="uploaderForm"  (ngSubmit)="submit()">
+  <div class="form-group form-row">
+    <input
+      formControlName="code"
+      id="code"
+      type="text"
+      placeholder="Code"
+      class="form-control">
+  </div>
+
+  <div class="form-group form-row">
+    <input
+      formControlName="name"
+      id="name"
+      type="text"
+      placeholder="Name"
+      class="form-control">
+  </div>
+
+  <div class="form-group form-row">
+    <br>
+    <select name="missions" formControlName="missions" id ="missions" style="width: 400px" multiple>
+      <option value="Infinity War">Infinity War</option>
+      <option value="Civil War">Civil War</option>
+    </select>
+
+  </div>
+
+  <div class="form-group form-row">
+    <label for="file">File</label>
+    <input
+      formControlName="file"
+      id="file"
+      type="file"
+      class="form-control"
+      (change)="onFileChange($event)">
+    <div *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
+      <div *ngIf="f.file.errors.required">File is required.</div>
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+<!--</div>-->

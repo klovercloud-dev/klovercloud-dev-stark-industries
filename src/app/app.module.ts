@@ -7,21 +7,27 @@ import { RouterModule, Routes} from "@angular/router";
 import { AvengersComponent } from './avengers/avengers.component';
 import {AvengersService} from "./avengers/service/avengers.service";
 import {HttpClientModule} from "@angular/common/http";
+import { UploaderComponent } from './uploader/uploader.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 const appRoutes: Routes = [
   {path:'about',component:AboutComponent},
   {path:'avengers',component:AvengersComponent},
+  {path:'upload',component:UploaderComponent},
   ]
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    AvengersComponent
+    AvengersComponent,
+    UploaderComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [AvengersService],
   bootstrap: [AppComponent]

@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Settings} from "../../common/settings";
-import {Observable} from "rxjs";
-import {Avengers} from "../avengers";
+import {environment} from "../../../environments/environment";
 
 @Injectable()
 export class AvengersService {
@@ -10,11 +8,11 @@ export class AvengersService {
   constructor(private http:HttpClient) { }
 
   get() {
-    return this.http.get(Settings.BASE_URL+this.resource)
+    return this.http.get(environment.base_url+this.resource)
   }
 
   post(data:FormData){
-    return this.http.post(Settings.BASE_URL+this.resource,data,{headers:null, responseType: 'text'})
+    return this.http.post(environment.base_url+this.resource,data,{headers:null, responseType: 'text'})
   }
 
 }

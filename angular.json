@@ -85,7 +85,6 @@
                 }
               ]
             }
-
           }
         },
         "serve": {
@@ -151,6 +150,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "stark-industries-angular"
+    }
+  },
+  "defaultProject": "stark-industries-angular",
+  "cli": {
+    "analytics": "e30d6b55-4324-42f6-b1d6-46604d2c2f17"
+  }
 }
